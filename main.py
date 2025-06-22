@@ -31,6 +31,9 @@ def get_posts(subreddit):
                      submission.report("Off-topic for r/NEET (Indian exam content).")
                      submission.mod.flair(text="🚧 Under Mod Review. Suspected as Indian NEET exam post")
                      submission.mod.remove()
+                     data = f"Title: {title}\n Body: {body}\n"
+                     with open('log.log', 'w') as logfile:
+                          logfile.write(data)
 
                 else:
                      pass
