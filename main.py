@@ -32,7 +32,7 @@ def get_posts(subreddit):
                      submission.mod.flair(text="🚧 Under Mod Review. Suspected as Indian NEET exam post")
                      submission.mod.remove()
                      data = f"Title: {title}\n Body: {body}\n"
-                     with open('log.log', 'w') as logfile:
+                     with open('log.log', 'a') as logfile:
                           logfile.write(data)
 
                 else:
@@ -50,7 +50,7 @@ def get_posts(subreddit):
                 continue 
         
         except Exception as e2:
-             with open('error.log', 'w') as ErrorLog:
+             with open('error.log', 'a') as ErrorLog:
                   ErrorLog.write(f"{e2}\n")
 
             
