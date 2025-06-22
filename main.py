@@ -19,6 +19,7 @@ subreddit = reddit.subreddit(subreddit_name)
 
 def get_posts(subreddit):
     while True:
+        print("Bot scanning for posts........")
         try:
             for submission in subreddit.stream.submissions(skip_existing=True):
                 title = submission.title 
@@ -32,13 +33,15 @@ def get_posts(subreddit):
                      submission.mod.remove()
 
                 else:
-                     print('NEET post')
+                     pass
 
                      
 
         except (praw.exceptions.PRAWException, 
                 praw.exceptions.APIException, 
-                praw.exceptions.ClientException) as e:
+                praw.exceptions.ClientException,
+                TypeError
+                ) as e:
                 print(f"An error occurred: {e}")
                 time.sleep(10)
                 continue 
