@@ -48,6 +48,11 @@ def get_posts(subreddit):
                 print(f"An error occurred: {e}")
                 time.sleep(10)
                 continue 
+        
+        except Exception as e2:
+             with open('error.log', 'w') as ErrorLog:
+                  ErrorLog.write(f"{e2}\n")
+
             
 # def accept_mod_invite():
 #     reddit.subreddit(subreddit_name).mod.accept_invite()
