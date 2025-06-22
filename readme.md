@@ -49,6 +49,7 @@ A Python bot that uses PRAW and Google Gemini (2.0 Flash) API to automatically m
     PASSWORD=<bot password>
     USER_AGENT="script:NEETbot:1.0 (by u/YourName)"
     GEMINI_API_KEY=<Your Gemini API key>
+    SUBREDDIT_NAME=<The subreddit you want to run this bot on>
 
 4. **Invite bot as moderator**
      *On Reddit: Mod Tools → Moderators → Invite Mod

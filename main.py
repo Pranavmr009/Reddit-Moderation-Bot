@@ -14,7 +14,7 @@ reddit = praw.Reddit(
     username=os.getenv("USERNAME"),
     password=os.getenv("PASSWORD")
 )
-subreddit_name = 'TestingGroundBot'
+subreddit_name = os.getenv("SUBREDDIT_NAME")
 subreddit = reddit.subreddit(subreddit_name)
 
 def get_posts(subreddit):
